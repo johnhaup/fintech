@@ -1,5 +1,3 @@
-// https://flatuicolors.com/palette/us
-
 export const COLOR_PALETTE = [
   'radicalRed',
   'stratos',
