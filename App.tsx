@@ -6,6 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { MainButton } from './src/components/primitives/MainButton';
 import { MainText } from './src/components/primitives/MainText';
 
 const App = () => {
@@ -28,6 +29,11 @@ const App = () => {
         <MainText body1SemiBold>body1SemiBold</MainText>
         <MainText center>center</MainText>
         <MainText underline>underline</MainText>
+        <MainButton text={'primary'} onPress={() => null} primary />
+        <MainButton text={'secondary'} onPress={() => null} secondary />
+        <MainButton text={'midLight'} onPress={() => null} midLight />
+        <MainButton text={'midDark'} onPress={() => null} midDark />
+        <MainButton text={'smallDark'} onPress={() => null} smallDark />
       </ScrollView>
     </View>
   );
