@@ -1,3 +1,4 @@
+import { MainButton, MainText } from '@atoms';
 import React from 'react';
 import {
   ScrollView,
@@ -6,8 +7,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { MainButton } from './src/components/primitives/MainButton';
-import { MainText } from './src/components/primitives/MainText';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
