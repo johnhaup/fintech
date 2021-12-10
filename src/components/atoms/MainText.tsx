@@ -1,10 +1,10 @@
-import { last } from 'lodash';
+import { Color, colorPalette, COLOR_PALETTE } from '@styles';
 import compact from 'lodash/compact';
+import last from 'lodash/last';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
 import React, { ReactElement } from 'react';
 import { StyleSheet, Text, TextProps } from 'react-native';
-import { Color, colorPalette, COLOR_PALETTE } from '../../styles/colorPalette';
 
 type DefinedTextChild = string | ReactElement<Text>;
 type TextChild = DefinedTextChild | DefinedTextChild[] | undefined | null;

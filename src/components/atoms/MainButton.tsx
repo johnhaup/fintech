@@ -1,4 +1,5 @@
-import { last } from 'lodash';
+import { Color, colorPalette } from '@styles';
+import last from 'lodash/last';
 import pick from 'lodash/pick';
 import React from 'react';
 import {
@@ -6,7 +7,6 @@ import {
   PressableStateCallbackType,
   StyleSheet,
 } from 'react-native';
-import { Color, colorPalette } from '../../styles/colorPalette';
 import { MainText } from './MainText';
 
 const BUTTON_TYPES = [

@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   extends: ['@react-native-community', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react-hooks', 'detox'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'import'],
   env: {
     jest: true,
   },
@@ -21,4 +21,18 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['./'],
+        alias: {
+          '@atoms': './src/components/atoms',
+          '@images': './assets/images',
+          '@molecules': './src/components/molecules',
+          '@organisms': './src/components/organisms',
+          '@styles': './src/styles',
+        },
+      },
+    },
+  },
 };
