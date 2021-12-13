@@ -1,6 +1,6 @@
+import { colorPalette } from '@styles';
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { colorPalette } from '../../../styles/colorPalette';
 import { MainButton } from '../MainButton';
 
 beforeEach(() => {
