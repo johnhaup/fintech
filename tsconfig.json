@@ -30,7 +30,8 @@
       "@images": ["./assets/images"],
       "@molecules": ["./src/components/molecules"],
       "@organisms": ["./src/components/organisms"],
-      "@styles": ["./src/styles"]
+      "@styles": ["./src/styles"],
+      "@svgs": ["./src/components/svgs"]
     }
   },
   "exclude": [
