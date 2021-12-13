@@ -4,6 +4,7 @@ import capitalize from 'lodash/capitalize';
 import React, { cloneElement } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { MainText } from './MainText';
+import { Spacer } from './Spacer';
 
 const TRANSFER_STATUSES = ['sent', 'received', 'failed'] as const;
 type TransferStatusTuple = typeof TRANSFER_STATUSES;
@@ -37,7 +38,7 @@ export const Pill = ({
   return (
     <View style={containerStyle} testID={testID}>
       <View style={styles.iconContainer}>{cloneElement(iconMap[status])}</View>
-      <View style={styles.spacer} />
+      <Spacer w={4} />
       <MainText body3 white>
         {capitalize(status)}
       </MainText>
@@ -61,8 +62,5 @@ const styles = StyleSheet.create({
     backgroundColor: colorPalette.white,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  spacer: {
-    width: 4,
   },
 });
