@@ -1,4 +1,4 @@
-import { MainButton, MainText, Pill } from '@atoms';
+import { MainButton, MainText, Pill, Spacer } from '@atoms';
 import React from 'react';
 import {
   ScrollView,
@@ -29,12 +29,19 @@ const App = () => {
         <MainText center>center</MainText>
         <MainText underline>underline</MainText>
         <MainButton text={'primary'} onPress={() => null} primary />
+        <Spacer height={8} />
         <MainButton text={'secondary'} onPress={() => null} secondary />
+        <Spacer height={8} />
         <MainButton text={'midLight'} onPress={() => null} midLight />
+        <Spacer height={8} />
         <MainButton text={'midDark'} onPress={() => null} midDark />
+        <Spacer height={8} />
         <MainButton text={'smallDark'} onPress={() => null} smallDark />
+        <Spacer height={8} />
         <Pill status={'sent'} />
+        <Spacer height={8} />
         <Pill status={'received'} />
+        <Spacer height={8} />
         <Pill status={'failed'} />
       </ScrollView>
     </View>
