@@ -22,6 +22,7 @@ module.exports = {
           '@molecules': './src/components/molecules',
           '@organisms': './src/components/organisms',
           '@styles': './src/styles',
+          '@svgs': './src/components/svgs',
         },
       },
     ],
