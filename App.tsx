@@ -1,4 +1,4 @@
-import { MainButton, MainText } from '@atoms';
+import { MainButton, MainText, Pill } from '@atoms';
 import React from 'react';
 import {
   ScrollView,
@@ -33,6 +33,9 @@ const App = () => {
         <MainButton text={'midLight'} onPress={() => null} midLight />
         <MainButton text={'midDark'} onPress={() => null} midDark />
         <MainButton text={'smallDark'} onPress={() => null} smallDark />
+        <Pill status={'sent'} />
+        <Pill status={'received'} />
+        <Pill status={'failed'} />
       </ScrollView>
     </View>
   );
