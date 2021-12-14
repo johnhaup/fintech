@@ -1,4 +1,11 @@
-import { MainButton, MainText, Pill, Spacer } from '@atoms';
+import {
+  MainButton,
+  MainText,
+  Pill,
+  ProfileDefaultAvatar,
+  Spacer,
+} from '@atoms';
+import { colorPalette } from '@styles';
 import React from 'react';
 import {
   ScrollView,
@@ -43,6 +50,21 @@ const App = () => {
         <Pill status={'received'} />
         <Spacer height={8} />
         <Pill status={'failed'} />
+        <Spacer height={8} />
+        <View
+          style={{
+            flexDirection: 'row',
+            backgroundColor: colorPalette.biscay,
+            padding: 8,
+          }}>
+          <ProfileDefaultAvatar small />
+          <Spacer w={8} />
+          <ProfileDefaultAvatar medium />
+          <Spacer w={8} />
+          <ProfileDefaultAvatar large />
+          <Spacer w={8} />
+          <ProfileDefaultAvatar profile />
+        </View>
       </ScrollView>
     </View>
   );
