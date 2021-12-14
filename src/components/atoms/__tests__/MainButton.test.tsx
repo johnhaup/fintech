@@ -17,15 +17,13 @@ describe('Button Type Props', () => {
       <MainButton testID={'testID'} onPress={() => null} text={'button'} />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        backgroundColor: colorPalette.radicalRed,
-        paddingHorizontal: 40,
-        paddingVertical: 16,
-        borderRadius: 10,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      backgroundColor: colorPalette.radicalRed,
+      paddingHorizontal: 40,
+      paddingVertical: 16,
+      borderRadius: 10,
+      alignSelf: 'center',
+    });
   });
 
   test('should apply primary style', () => {
@@ -38,15 +36,13 @@ describe('Button Type Props', () => {
       />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        backgroundColor: colorPalette.radicalRed,
-        paddingHorizontal: 40,
-        paddingVertical: 16,
-        borderRadius: 10,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      backgroundColor: colorPalette.radicalRed,
+      paddingHorizontal: 40,
+      paddingVertical: 16,
+      borderRadius: 10,
+      alignSelf: 'center',
+    });
   });
 
   test('should apply secondary style', () => {
@@ -59,16 +55,14 @@ describe('Button Type Props', () => {
       />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        borderWidth: 1,
-        borderColor: colorPalette.eastBay,
-        paddingHorizontal: 40,
-        paddingVertical: 16,
-        borderRadius: 10,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      borderWidth: 1,
+      borderColor: colorPalette.eastBay,
+      paddingHorizontal: 40,
+      paddingVertical: 16,
+      borderRadius: 10,
+      alignSelf: 'center',
+    });
   });
 
   test('should apply midLight style', () => {
@@ -81,15 +75,13 @@ describe('Button Type Props', () => {
       />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        backgroundColor: colorPalette.white,
-        paddingHorizontal: 32,
-        paddingVertical: 12,
-        borderRadius: 10,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      backgroundColor: colorPalette.white,
+      paddingHorizontal: 32,
+      paddingVertical: 12,
+      borderRadius: 10,
+      alignSelf: 'center',
+    });
   });
 
   test('should apply midDark style', () => {
@@ -102,15 +94,13 @@ describe('Button Type Props', () => {
       />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        backgroundColor: colorPalette.biscay2,
-        paddingHorizontal: 32,
-        paddingVertical: 12,
-        borderRadius: 10,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      backgroundColor: colorPalette.biscay2,
+      paddingHorizontal: 32,
+      paddingVertical: 12,
+      borderRadius: 10,
+      alignSelf: 'center',
+    });
   });
 
   test('should apply smallDark style', () => {
@@ -123,15 +113,13 @@ describe('Button Type Props', () => {
       />,
     );
     const component = getByTestId('testID');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        backgroundColor: colorPalette.biscay,
-        paddingHorizontal: 8,
-        paddingVertical: 4,
-        borderRadius: 8,
-        alignSelf: 'center',
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      backgroundColor: colorPalette.biscay,
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      borderRadius: 8,
+      alignSelf: 'center',
+    });
   });
 
   test('should console.warn if multiple supplied', () => {
@@ -155,14 +143,12 @@ describe('MainText Props', () => {
       <MainButton primary onPress={() => null} text={'button'} />,
     );
     const component = getByText('button');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        color: colorPalette.white,
-        fontFamily: 'OpenSans-SemiBold',
-        fontSize: 16,
-        lineHeight: 24,
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      color: colorPalette.white,
+      fontFamily: 'OpenSans-SemiBold',
+      fontSize: 16,
+      lineHeight: 24,
+    });
   });
 
   test('should apply correct text props for secondary style', () => {
@@ -170,14 +156,12 @@ describe('MainText Props', () => {
       <MainButton secondary onPress={() => null} text={'button'} />,
     );
     const component = getByText('button');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        color: colorPalette.eastBay,
-        fontFamily: 'OpenSans-SemiBold',
-        fontSize: 16,
-        lineHeight: 24,
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      color: colorPalette.eastBay,
+      fontFamily: 'OpenSans-SemiBold',
+      fontSize: 16,
+      lineHeight: 24,
+    });
   });
 
   test('should apply correct text props for midLight style', () => {
@@ -185,14 +169,12 @@ describe('MainText Props', () => {
       <MainButton midLight onPress={() => null} text={'button'} />,
     );
     const component = getByText('button');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        color: colorPalette.biscay2,
-        fontFamily: 'OpenSans-SemiBold',
-        fontSize: 16,
-        lineHeight: 24,
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      color: colorPalette.biscay2,
+      fontFamily: 'OpenSans-SemiBold',
+      fontSize: 16,
+      lineHeight: 24,
+    });
   });
 
   test('should apply correct text props for midDark style', () => {
@@ -200,14 +182,12 @@ describe('MainText Props', () => {
       <MainButton midDark onPress={() => null} text={'button'} />,
     );
     const component = getByText('button');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        color: colorPalette.white,
-        fontFamily: 'OpenSans-SemiBold',
-        fontSize: 16,
-        lineHeight: 24,
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      color: colorPalette.white,
+      fontFamily: 'OpenSans-SemiBold',
+      fontSize: 16,
+      lineHeight: 24,
+    });
   });
 
   test('should apply correct text props for smallDark style', () => {
@@ -215,13 +195,11 @@ describe('MainText Props', () => {
       <MainButton smallDark onPress={() => null} text={'button'} />,
     );
     const component = getByText('button');
-    expect(component.props.style).toEqual(
-      expect.objectContaining({
-        color: colorPalette.royalBlue,
-        fontFamily: 'OpenSans-Regular',
-        fontSize: 14,
-        lineHeight: 24,
-      }),
-    );
+    expect(component.props.style).toMatchObject({
+      color: colorPalette.royalBlue,
+      fontFamily: 'OpenSans-Regular',
+      fontSize: 14,
+      lineHeight: 24,
+    });
   });
 });
