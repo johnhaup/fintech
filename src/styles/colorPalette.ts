@@ -1,28 +1,4 @@
-export const COLOR_PALETTE = [
-  'radicalRed',
-  'stratos',
-  'eastBay',
-  'white',
-  'blueZodiac',
-  'bunting',
-  'swissCoffee',
-  'royalBlue',
-  'biscay',
-  'biscay2',
-  'butterflyBush',
-  'shipCove',
-  'java',
-  'sunsetOrange',
-  'seaBuckthorn',
-  'mySin',
-  'jacksonsPurple',
-] as const;
-
-// https://stackoverflow.com/a/45486495/7776799
-type ColorsTuple = typeof COLOR_PALETTE;
-export type Color = ColorsTuple[number];
-
-export const colorPalette: { [key in Color]: string } = {
+export const colorPalette = {
   radicalRed: '#FF2E63',
   stratos: '#010A43',
   eastBay: '#464E8A',
@@ -41,3 +17,5 @@ export const colorPalette: { [key in Color]: string } = {
   mySin: '#FFB129',
   jacksonsPurple: '#17288E',
 };
+
+export type Color = keyof typeof colorPalette;
