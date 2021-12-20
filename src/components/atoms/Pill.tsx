@@ -39,7 +39,7 @@ export const Pill = ({
     <View style={containerStyle} testID={testID}>
       <View style={styles.iconContainer}>{cloneElement(iconMap[status])}</View>
       <Spacer w={4} />
-      <MainText body3 white>
+      <MainText fontType={'body3'} color={'white'}>
         {capitalize(status)}
       </MainText>
     </View>
