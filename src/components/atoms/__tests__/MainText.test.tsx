@@ -83,7 +83,7 @@ describe('Color props', () => {
 
   test('should pull color from color palette', () => {
     const { getByTestId } = render(
-      <MainText testID={'testID'} blueZodiac>
+      <MainText testID={'testID'} color={'blueZodiac'}>
         test
       </MainText>,
     );
@@ -91,27 +91,6 @@ describe('Color props', () => {
     expect(component.props.style).toMatchObject({
       color: colorPalette['blueZodiac'],
     });
-  });
-
-  test('should only apply final color if multiple supplied', () => {
-    const { getByTestId } = render(
-      <MainText testID={'testID'} blueZodiac bunting butterflyBush>
-        test
-      </MainText>,
-    );
-    const component = getByTestId('testID');
-    expect(component.props.style).toMatchObject({
-      color: colorPalette['butterflyBush'],
-    });
-  });
-
-  test('should console.warn if multiple supplied', () => {
-    render(
-      <MainText testID={'testID'} blueZodiac bunting butterflyBush>
-        test
-      </MainText>,
-    );
-    expect(console.warn).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -128,7 +107,7 @@ describe('Font props', () => {
 
   test('should pull font style from stylesheet', () => {
     const { getByTestId } = render(
-      <MainText testID={'testID'} heading1>
+      <MainText testID={'testID'} fontType={'heading1'}>
         test
       </MainText>,
     );
@@ -138,29 +117,5 @@ describe('Font props', () => {
       fontSize: 40,
       lineHeight: 48,
     });
-  });
-
-  test('should only apply final font prop if multiple supplied', () => {
-    const { getByTestId } = render(
-      <MainText testID={'testID'} heading1 heading2 body1Bold>
-        test
-      </MainText>,
-    );
-    const component = getByTestId('testID');
-    expect(component.props.style).toMatchObject({
-      fontFamily: 'OpenSans-Bold',
-      fontSize: 16,
-      lineHeight: 24,
-    });
-  });
-
-  test('should console.warn if multiple supplied', () => {
-    console.warn = jest.fn();
-    render(
-      <MainText testID={'testID'} heading1 heading2 body1Bold>
-        test
-      </MainText>,
-    );
-    expect(console.warn).toHaveBeenCalledTimes(1);
   });
 });

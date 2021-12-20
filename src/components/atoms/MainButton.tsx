@@ -60,14 +60,12 @@ export const MainButton = ({
     return StyleSheet.flatten([fontPropStyle, { opacity, transform }]);
   };
 
-  const textColorProps = { [textButtonTypeMap[buttonTypeKey]]: true };
-  const textFontProps = rest.smallDark
-    ? { body2: true }
-    : { body1SemiBold: true };
+  const textColor = textButtonTypeMap[buttonTypeKey];
+  const fontType = rest.smallDark ? 'body2' : 'body1SemiBold';
 
   return (
     <Pressable style={style} onPress={onPress} testID={testID}>
-      <MainText {...textFontProps} {...textColorProps}>
+      <MainText fontType={fontType} color={textColor}>
         {text}
       </MainText>
     </Pressable>
