@@ -3,32 +3,27 @@ import { ArrowSvg, ExclamationPointSvg } from '@svgs';
 import capitalize from 'lodash/capitalize';
 import React, { cloneElement } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { MainText } from './MainText';
-import { Spacer } from './Spacer';
+import { MainText } from '../atoms/MainText';
+import { Spacer } from '../atoms/Spacer';
 
-const TRANSFER_STATUSES = ['sent', 'received', 'failed'] as const;
-type TransferStatusTuple = typeof TRANSFER_STATUSES;
-export type TransferStatus = TransferStatusTuple[number];
-
-const colorMap: { [key in TransferStatus]: string } = {
+const colorMap = {
   sent: colorPalette.seaBuckthorn,
   received: colorPalette.java,
   failed: colorPalette.sunsetOrange,
 };
 
-const iconMap: { [key in TransferStatus]: JSX.Element } = {
+const iconMap = {
   sent: <ArrowSvg color={colorMap['sent']} />,
   received: <ArrowSvg left color={colorMap['received']} />,
   failed: <ExclamationPointSvg color={colorMap['failed']} />,
 };
 
-export const Pill = ({
-  status,
-  testID = 'pill',
-}: {
-  status: TransferStatus;
+interface Props {
+  status: 'sent' | 'received' | 'failed';
   testID?: string;
-}) => {
+}
+
+export const Pill = ({ status, testID = 'pill' }: Props) => {
   const backgroundColor = colorMap[status];
   const containerStyle = StyleSheet.flatten([
     styles.container,
