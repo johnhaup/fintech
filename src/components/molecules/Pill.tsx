@@ -1,10 +1,9 @@
+import { MainText, Spacer } from '@atoms';
 import { colorPalette } from '@styles';
 import { ArrowSvg, ExclamationPointSvg } from '@svgs';
 import capitalize from 'lodash/capitalize';
 import React, { cloneElement } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { MainText } from '../atoms/MainText';
-import { Spacer } from '../atoms/Spacer';
 
 const colorMap = {
   sent: colorPalette.seaBuckthorn,
