@@ -8,20 +8,6 @@ describe('Height prop', () => {
     const component = getByTestId('testID');
     expect(component.props.style).toStrictEqual({ height: 10 });
   });
-
-  test('should set height with h prop', () => {
-    const { getByTestId } = render(<Spacer testID={'testID'} h={10} />);
-    const component = getByTestId('testID');
-    expect(component.props.style).toStrictEqual({ height: 10 });
-  });
-
-  test('should set height to h + height if both supplied', () => {
-    const { getByTestId } = render(
-      <Spacer testID={'testID'} h={10} height={10} />,
-    );
-    const component = getByTestId('testID');
-    expect(component.props.style).toStrictEqual({ height: 20 });
-  });
 });
 
 describe('Width prop', () => {
@@ -29,20 +15,6 @@ describe('Width prop', () => {
     const { getByTestId } = render(<Spacer testID={'testID'} width={10} />);
     const component = getByTestId('testID');
     expect(component.props.style).toStrictEqual({ width: 10 });
-  });
-
-  test('should set width with w prop', () => {
-    const { getByTestId } = render(<Spacer testID={'testID'} w={10} />);
-    const component = getByTestId('testID');
-    expect(component.props.style).toStrictEqual({ width: 10 });
-  });
-
-  test('should set width to w + width if both supplied', () => {
-    const { getByTestId } = render(
-      <Spacer testID={'testID'} w={10} width={10} />,
-    );
-    const component = getByTestId('testID');
-    expect(component.props.style).toStrictEqual({ width: 20 });
   });
 });
 
@@ -81,9 +53,8 @@ describe('Style prop', () => {
         testID={'testID'}
         style={{ backgroundColor: 'blue', height: 20, flex: 3 }}
         height={5}
-        h={10}
         flex
-        w={10}
+        width={10}
       />,
     );
     const component = getByTestId('testID');
@@ -92,6 +63,54 @@ describe('Style prop', () => {
       height: 20,
       flex: 3,
       width: 10,
+    });
+  });
+});
+
+describe('Safe Area prop', () => {
+  test('should set height to safe area top height', () => {
+    const { getByTestId } = render(<Spacer testID={'testID'} safeTop />);
+    const component = getByTestId('testID');
+    expect(component.props.style).toStrictEqual({
+      height: 10,
+    });
+  });
+
+  test('should add safe area top height to injected height', () => {
+    const { getByTestId } = render(
+      <Spacer testID={'testID'} safeTop height={7} />,
+    );
+    const component = getByTestId('testID');
+    expect(component.props.style).toStrictEqual({
+      height: 17,
+    });
+  });
+
+  test('should set height to safe area bottom height', () => {
+    const { getByTestId } = render(<Spacer testID={'testID'} safeBottom />);
+    const component = getByTestId('testID');
+    expect(component.props.style).toStrictEqual({
+      height: 9,
+    });
+  });
+
+  test('should add safe area bottom height to injected height', () => {
+    const { getByTestId } = render(
+      <Spacer testID={'testID'} safeBottom height={7} />,
+    );
+    const component = getByTestId('testID');
+    expect(component.props.style).toStrictEqual({
+      height: 16,
+    });
+  });
+
+  test('should add both safe area props to height', () => {
+    const { getByTestId } = render(
+      <Spacer testID={'testID'} safeTop safeBottom height={7} />,
+    );
+    const component = getByTestId('testID');
+    expect(component.props.style).toStrictEqual({
+      height: 26,
     });
   });
 });
