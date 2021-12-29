@@ -32,7 +32,7 @@ export const Pill = ({ status, testID = 'pill' }: Props) => {
   return (
     <View style={containerStyle} testID={testID}>
       <View style={styles.iconContainer}>{cloneElement(iconMap[status])}</View>
-      <Spacer w={4} />
+      <Spacer width={4} />
       <MainText fontType={'body3'} color={'white'}>
         {capitalize(status)}
       </MainText>
