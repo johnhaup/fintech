@@ -22,7 +22,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 40,
       paddingVertical: 16,
       borderRadius: 10,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
@@ -41,7 +41,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 40,
       paddingVertical: 16,
       borderRadius: 10,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
@@ -61,7 +61,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 40,
       paddingVertical: 16,
       borderRadius: 10,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
@@ -80,7 +80,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 32,
       paddingVertical: 12,
       borderRadius: 10,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
@@ -99,7 +99,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 32,
       paddingVertical: 12,
       borderRadius: 10,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
@@ -118,7 +118,7 @@ describe('Button Type Props', () => {
       paddingHorizontal: 8,
       paddingVertical: 4,
       borderRadius: 8,
-      alignSelf: 'center',
+      alignSelf: 'flex-start',
     });
   });
 
