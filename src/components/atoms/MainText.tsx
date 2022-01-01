@@ -1,12 +1,13 @@
 import { Color, colorPalette } from '@styles';
 import compact from 'lodash/compact';
 import React, { ReactElement } from 'react';
-import { StyleSheet, Text, TextProps } from 'react-native';
+import { StyleSheet, Text, TextProps, TextStyle } from 'react-native';
+import Animated, { AnimatedStyleProp } from 'react-native-reanimated';
 
 type DefinedTextChild = string | ReactElement<Text>;
-type TextChild = DefinedTextChild | DefinedTextChild[] | undefined | null;
+type Children = DefinedTextChild | DefinedTextChild[] | undefined | null;
 interface Props extends TextProps {
-  children?: TextChild;
+  children?: Children;
   /**
    * defaults to biscay2
    */
@@ -25,6 +26,7 @@ interface Props extends TextProps {
     | 'body1SemiBold';
   center?: boolean;
   underline?: boolean;
+  animatedStyle?: AnimatedStyleProp<TextStyle>;
 }
 
 export const MainText = ({
@@ -34,6 +36,7 @@ export const MainText = ({
   color: injectedColor,
   center,
   underline,
+  animatedStyle,
   ...rest
 }: Props) => {
   if (!children) {
@@ -53,6 +56,14 @@ export const MainText = ({
   const textStyles = StyleSheet.flatten(
     compact([fontPropStyle, centerStyle, underlineStyle, { color }, style]),
   );
+
+  if (animatedStyle) {
+    return (
+      <Animated.Text style={[textStyles, animatedStyle]} {...rest}>
+        {children}
+      </Animated.Text>
+    );
+  }
 
   return (
     <Text style={textStyles} {...rest}>
