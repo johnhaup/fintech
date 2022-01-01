@@ -119,3 +119,31 @@ describe('Font props', () => {
     });
   });
 });
+
+describe('Animated text', () => {
+  test('should return Animated.Text component if animated style is passed', () => {
+    const { getByTestId } = render(
+      <MainText testID={'testID'} animatedStyle={{ color: 'purple' }}>
+        test
+      </MainText>,
+    );
+    const component = getByTestId('testID');
+    expect(component.props.animatedStyle).toBeDefined();
+  });
+
+  test('should return regular Text component if animated style is not passed', () => {
+    const { getByTestId } = render(<MainText testID={'testID'}>test</MainText>);
+    const component = getByTestId('testID');
+    expect(component.props.animatedStyle).toBeUndefined();
+  });
+
+  test('should add animated style prop to styles', () => {
+    const { getByTestId } = render(
+      <MainText testID={'testID'} animatedStyle={{ color: 'purple' }}>
+        test
+      </MainText>,
+    );
+    const component = getByTestId('testID');
+    expect(component.props.style).toMatchObject({ color: 'purple' });
+  });
+});
