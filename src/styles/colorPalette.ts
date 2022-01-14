@@ -3,6 +3,7 @@ export const colorPalette = {
   stratos: '#010A43',
   eastBay: '#464E8A',
   white: '#FFFFFF',
+  offWhite: '#FAFAFA',
   blueZodiac: '#10194E',
   bunting: '#192259',
   swissCoffee: '#D7C9C9',
@@ -14,8 +15,11 @@ export const colorPalette = {
   java: '#1DC7AC',
   sunsetOrange: '#FE4A54',
   seaBuckthorn: '#FAAD39',
+  paleSun: '#FDD590',
   mySin: '#FFB129',
   jacksonsPurple: '#17288E',
+  blueZodiac2: '#0E164D',
+  astronaut: '#283470',
 };
 
 export type Color = keyof typeof colorPalette;
