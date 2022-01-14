@@ -18,6 +18,7 @@ module.exports = {
         ],
         alias: {
           '@atoms': './src/components/atoms',
+          '@constants': './src/constants',
           '@images': './assets/images',
           '@molecules': './src/components/molecules',
           '@navigation': './src/navigation',

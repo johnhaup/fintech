@@ -1,5 +1,6 @@
 import React from 'react';
-import { Dimensions, StyleSheet, View, ViewProps } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants/measurements';
 
 export const FullScreenView = ({ style = {}, ...rest }: ViewProps) => {
   const viewStyles = StyleSheet.flatten([styles.container, style]);
@@ -9,7 +10,7 @@ export const FullScreenView = ({ style = {}, ...rest }: ViewProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: Dimensions.get('screen').height,
-    width: Dimensions.get('screen').width,
+    height: SCREEN_HEIGHT,
+    width: SCREEN_WIDTH,
   },
 });
