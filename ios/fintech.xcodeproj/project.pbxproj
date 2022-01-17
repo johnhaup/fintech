@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		230F450127951DE800833F37 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230F450027951DE800833F37 /* BootSplash.storyboard */; };
 		3AEE47AAAA7F4C46ABE61C02 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40DD42DAD53F46BDAA7C7158 /* OpenSans-SemiBold.ttf */; };
 		4A4CCCC674124CC0A665199A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A853DC283E549D388ED8767 /* OpenSans-Regular.ttf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-fintech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-fintech.a */; };
@@ -47,6 +48,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fintech/main.m; sourceTree = "<group>"; };
 		154938FE7A684A26A89F321A /* Signika-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Signika-Bold.ttf"; path = "../assets/fonts/Signika-Bold.ttf"; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-fintech-fintechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fintech-fintechTests.release.xcconfig"; path = "Target Support Files/Pods-fintech-fintechTests/Pods-fintech-fintechTests.release.xcconfig"; sourceTree = "<group>"; };
+		230F450027951DE800833F37 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = fintech/BootSplash.storyboard; sourceTree = "<group>"; };
 		26D4D4C734DD4471B713BAEA /* Signika-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Signika-Medium.ttf"; path = "../assets/fonts/Signika-Medium.ttf"; sourceTree = "<group>"; };
 		40DD42DAD53F46BDAA7C7158 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-fintech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fintech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				230F450027951DE800833F37 /* BootSplash.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				230F450127951DE800833F37 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				69C6F886DF514A9DBED81BB5 /* OpenSans-Bold.ttf in Resources */,
 				BEC80CFB38C44749A88EC116 /* OpenSans-Medium.ttf in Resources */,
