@@ -1,5 +1,7 @@
 # fintech
 
+[![Build Status](https://app.bitrise.io/app/72344e65df4902ac/status.svg?token=IjC28y3YJwvVKZ7-73YPew&branch=master)](https://app.bitrise.io/app/72344e65df4902ac)
+
 <img src="./assets/images/fintechIcon.png" alt="app icon" width="300"/>
 
 #### Implementation of this free design:
