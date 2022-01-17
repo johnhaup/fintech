@@ -1,4 +1,4 @@
-package com.fintech;
+package com.haup.fintech;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
