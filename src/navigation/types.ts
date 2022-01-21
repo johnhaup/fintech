@@ -6,6 +6,7 @@ export type RootStackParamsList = {
 
 export type LoginStackParamsList = {
   Onboarding: undefined;
+  Login: undefined;
 };
 
 export type OnboardingProps = StackScreenProps<

@@ -6,14 +6,19 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
+import { OnboardingProps } from '../../navigation';
 import { colorPalette } from '../../styles';
 
-export const Onboarding = () => {
+export const Onboarding = ({ navigation }: OnboardingProps) => {
   const scrollValue = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler(event => {
     scrollValue.value = event.contentOffset.x;
   });
+
+  const onButtonPress = () => {
+    navigation.navigate('Login');
+  };
 
   return (
     <View style={styles.container}>
@@ -33,7 +38,10 @@ export const Onboarding = () => {
         <OnboardingTwo animatedValue={scrollValue} />
       </AbsoluteView>
       <AbsoluteView bottom left>
-        <InformationCard onButtonPress={() => null} scrollValue={scrollValue} />
+        <InformationCard
+          onButtonPress={onButtonPress}
+          scrollValue={scrollValue}
+        />
       </AbsoluteView>
     </View>
   );

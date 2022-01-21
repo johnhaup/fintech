@@ -72,7 +72,6 @@ export const InformationCard = ({ onButtonPress, scrollValue }: Props) => {
           <MainText fontType={'heading3'} color={'white'}>
             Transfer That Is Safe
           </MainText>
-          <AbsoluteView></AbsoluteView>
           <Spacer height={8} />
           <MainText fontType={'body1'} color={'offWhite'}>
             You have nothing to be scared about, we got you covered.
@@ -85,7 +84,6 @@ export const InformationCard = ({ onButtonPress, scrollValue }: Props) => {
             <MainText fontType={'heading3'} color={'biscay2'}>
               Transfer Money With Ease
             </MainText>
-            <AbsoluteView></AbsoluteView>
             <Spacer height={8} />
             <MainText fontType={'body1'} color={'astronaut'}>
               Making money is hard enough, we make transfering it easy enough.
