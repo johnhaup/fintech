@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "175159518995",
+    "project_id": "fintech-4868d",
+    "storage_bucket": "fintech-4868d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175159518995:android:40a2d1f584f315f89edce6",
+        "android_client_info": {
+          "package_name": "com.haup.fintech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175159518995-nme74ntmt10pl5fiei0b5d0tjig3ss2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.haup.fintech",
+            "certificate_hash": "1f901316acbbf7c289617eddea3004ed68930e49"
+          }
+        },
+        {
+          "client_id": "175159518995-evjfs3imq8tk6qiu84vdfovt1tt87hir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCliJC9WumbMO7Fnp6E_RhHc6rDhL-It60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175159518995-evjfs3imq8tk6qiu84vdfovt1tt87hir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
