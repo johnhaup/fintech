@@ -17,7 +17,7 @@ export const Onboarding = ({ navigation }: OnboardingProps) => {
   });
 
   const onButtonPress = () => {
-    navigation.navigate('Login');
+    navigation.navigate('SignIn');
   };
 
   return (

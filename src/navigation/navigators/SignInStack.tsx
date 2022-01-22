@@ -1,15 +1,15 @@
-import { LoginStackParamsList } from '@navigation';
+import { SignInStackParamsList } from '@navigation';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Login, Onboarding } from '@screens';
+import { Onboarding, SignIn } from '@screens';
 import React from 'react';
 
-const Stack = createStackNavigator<LoginStackParamsList>();
+const Stack = createStackNavigator<SignInStackParamsList>();
 
-export const LoginStack = () => {
+export const SignInStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Onboarding" component={Onboarding} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>
   );
 };

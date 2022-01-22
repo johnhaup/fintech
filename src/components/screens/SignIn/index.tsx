@@ -1,13 +1,13 @@
 import { colorPalette } from '@styles';
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { MainText } from '../atoms';
+import { MainText } from '../../atoms';
 
-export const Login = () => {
+export const SignIn = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../../assets/images/fintechIcon.png')}
+        source={require('../../../../assets/images/fintechIcon.png')}
         style={styles.logo}
       />
       <MainText color="white" fontType="heading2">

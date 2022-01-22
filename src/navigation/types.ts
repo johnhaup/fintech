@@ -1,15 +1,15 @@
 import { StackScreenProps } from '@react-navigation/stack';
 
 export type RootStackParamsList = {
-  LoginStack: undefined;
+  SignInStack: undefined;
 };
 
-export type LoginStackParamsList = {
+export type SignInStackParamsList = {
   Onboarding: undefined;
-  Login: undefined;
+  SignIn: undefined;
 };
 
 export type OnboardingProps = StackScreenProps<
-  LoginStackParamsList,
+  SignInStackParamsList,
   'Onboarding'
 >;
