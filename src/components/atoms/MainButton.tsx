@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     paddingVertical: 16,
     borderRadius: 10,
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
   },
   secondary: {
     borderWidth: 1,
